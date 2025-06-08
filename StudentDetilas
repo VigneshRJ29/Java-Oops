@@ -1,0 +1,43 @@
+Create a Class Student
+
+Fields: name, rollNo, marks
+
+Methods: displayDetails(), calculateGrade()
+
+//solution
+
+class Student {
+    String name;
+    String rollNo;
+    int mark;
+    
+    //constructor
+    public Student(String name,String rollNo,int mark){
+        this.name=name;
+        this.rollNo=rollNo;
+        this.mark=mark;
+        
+    }
+    public void displayDetials(){
+        System.out.println("Name : "+name);
+        System.out.println("RollNo : "+rollNo);
+        System.out.println("Mark : "+mark);
+    }
+    public void calculateGrade(){
+        if(mark>90)
+            System.out.println("A+");
+        else if (mark>80)
+            System.out.println("B+");
+        else if(mark>70)
+            System.out.println("c+");
+        else
+            System.out.println("U");
+    }
+}
+public class Main {
+    public static void main(String[]args){
+        Student ref=new Student("Vicky","21BT043",95);
+        ref.displayDetials();
+        ref.calculateGrade();
+    }
+}
