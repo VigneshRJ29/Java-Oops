@@ -1,0 +1,50 @@
+Question:
+Create a Student class that has an Address.
+
+The Address class should have fields like city, state, and pincode.
+
+The Student class should display its name and complete address.
+
+Solution
+________
+
+
+class Address{
+    String city;
+    String state;
+    int pincode;
+    
+    //constructor
+    public Address(String city,String state,int pincode){
+        this.city=city;
+        this.state=state;
+        this.pincode=pincode;
+        
+    }
+    //method call
+    public void getAddress(){
+        System.out.println(city+" "+state+" "+pincode);
+    }
+}
+class Student{
+    String name;
+    Address address;
+    
+    //constructor
+    public Student(String name,Address address){
+        this.name=name;
+        this.address=address;
+    }
+    //method call
+    public void getStudentDetails(){
+        System.out.println(name+" :");
+        address.getAddress();
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Address a=new Address("Dharmapuri","Tamilnadu",636905);
+        Student s=new Student("Vicky",a);
+        s.getStudentDetails();
+    }
+}
